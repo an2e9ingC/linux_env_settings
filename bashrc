@@ -112,6 +112,7 @@ if ! shopt -oq posix; then
 fi
 
 # some more ls aliases
+alias ls='ls -h --color=auto'
 alias l='ll'
 alias la='ls -AlF'
 alias ll='ls -CFl'
@@ -123,9 +124,9 @@ alias chown='chown -cf'
 alias chmod='chmod -cv'
 alias vi='vim -p'
 
-#jieya
+#compress
 alias tarx='tar -xvf'
-#yasuo
+#decompress
 alias tarz='tar -zcvf'
 
 #diff new version
@@ -144,6 +145,3 @@ alias chkconfig='update-rc.d'
 
 #minicom
 alias minicom='minicom -c on'
-
-
-PATH=$PATH:/home/michael/tools/gcc-4.6.4/bin
