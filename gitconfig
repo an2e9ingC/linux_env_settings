@@ -1,0 +1,16 @@
+[color]
+	ui = auto
+[user]
+	name = MichaelXu@deepin
+	email = xuchuaner@qq.com
+[alias]
+	co = checkout
+    br = branch
+    ci = commit
+    st = status
+	lg = log --pretty=format:\"%h--%an--%cd : %s\"
+
+[gui]
+    encoding = utf-8
+[core]
+	quotepath = false 
