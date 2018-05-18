@@ -1,12 +1,12 @@
 [color]
 	ui = auto
 [user]
-	name = MichaelXu@deepin
+	name = mx@win10linux
 	email = xuchuaner@qq.com
 [alias]
 	co = checkout
     br = branch
-    ci = commit
+    cm = commit
     st = status
 	lg = log --pretty=format:\"%h--%an--%cd : %s\"
 
