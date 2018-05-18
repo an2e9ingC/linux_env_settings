@@ -146,6 +146,7 @@ alias ..='cd ..'
 alias d='pwd'
 alias free='free -h'
 alias grep='grep -n'
+alias c='clear'
 
 #chkconfig in ubuntu
 alias chkconfig='update-rc.d'
