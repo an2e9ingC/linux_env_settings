@@ -57,9 +57,9 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\W\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
 unset color_prompt force_color_prompt
 
@@ -76,21 +76,21 @@ esac
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    alias dir='dir --color=auto'
-    alias vdir='vdir --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
 
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
+    #alias grep='grep --color=auto'
+    #alias fgrep='fgrep --color=auto'
+    #alias egrep='egrep --color=auto'
 fi
 
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-#alias ll='ls -l'
-#alias la='ls -A'
-#alias l='ls -CF'
+alias ll='ls -l'
+alias la='ls -A'
+alias l='ls -CF'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -118,43 +118,15 @@ else
     eval $(dircolors)
 fi
 
-# some more ls aliases
-alias ls='ls --color=auto -h'
-alias l='ll'
-alias la='ls -AlF'
-alias ll='ls -CFl'
-
-alias mv='mv -i'
-alias rm='rm -i'
-alias cp='cp -i'
-alias chown='chown -cf'
-alias chmod='chmod -cv'
-alias vi='vim -p'
-
-#jieya
-alias tarx='tar -xvf'
-#yasuo
-alias tarz='tar -zcvf'
-
-#diff new version
-alias diff='diff -u'
-
-#some else aliases
-alias ge='gedit'
-alias df='df -h'
-alias ..='cd ..'
-alias d='pwd'
-alias free='free -h'
-alias grep='grep -n'
-alias c='clear'
-
-#chkconfig in ubuntu
-alias chkconfig='update-rc.d'
-
-#minicom
-alias minicom='minicom -c on'
-
-work="/home/cdut/workspace/graduation_design/"
+#make man page colorfu
+# highlight man page
+export LESS_TERMCAP_mb=$'\E[01;31m'
+export LESS_TERMCAP_md=$'\E[01;31m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;44;33m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[01;32m'
 
 #enable the git command auto completion
 source ~/.git-completion.bash

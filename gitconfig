@@ -5,12 +5,13 @@
 	email = xuchuaner@qq.com
 [alias]
 	co = checkout
-    br = branch
-    cm = commit
-    st = status
+   	br = branch
+   	cm = commit
+   	st = status
 	lg = log --pretty=format:\"%h--%an--%cd : %s\"
 
 [gui]
     encoding = utf-8
 [core]
 	quotepath = false 
+    editor = vim
