@@ -1,17 +1,26 @@
-[color]
-	ui = auto
-[user]
-	name = mx@win10linux
-	email = xuchuaner@qq.com
-[alias]
-	co = checkout
-   	br = branch
-   	cm = commit
-   	st = status
-	lg = log --pretty=format:\"%h--%an--%cd : %s\"
+[credential "http://192.168.3.46"]
+        provider = generic
 
+[color]
+        ui = auto
+[user]
+        name = xuchuan
+        email = xuchuan@ebit.com
+[alias]
+        co = checkout
+        br = branch
+        cm = commit
+        rst = reset
+        st = status
+        lg = log --pretty=format:\"%h %an--%cd : %s\"
 [gui]
-    encoding = utf-8
+        encoding = utf-8
 [core]
-	quotepath = false 
-    editor = vim
+        quotepath = false
+        filemode = false
+        editor = vim
+        autocrlf = input
+        safecrlf = false
+        ignorecase = false
+[init]
+        defaultBranch = trunk
